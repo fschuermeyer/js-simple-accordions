@@ -1,4 +1,4 @@
-/**
+/**!
  *  Accordion Plugin Felix Schürmeyer
  */
 function accordion(settings) {
