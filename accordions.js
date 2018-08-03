@@ -46,19 +46,22 @@ function accordion(settings){
                     for(b = 0; b < elms.length; b++){
                                             
                         var d_body = elms[b].getElementsByClassName(acc_set.body);
+                        console.log(accBody);
 
-                        if (elms[b].classList.contains('is-open') && accBody.innerHTML != d_body[0].innerHTML){
-                            console.log(elms[b]);
+                        if (elms[b].classList.contains('is-open') && elms[b] != parent){  
+                            console.log('PARENT');
                             d_body[0].style.height= '0';
                             elms[b].classList.remove('is-open');  
                             d_body[0].style.padding= '1px 1.9rem';
                         }else{
+                
                             if(check){
                                 if(accBody.style.height == 'auto'){
                                     accBody.style.height= '0';
                                     parent.classList.remove('is-open');       
                                     accBody.style.padding= '1px 1.9rem'; 
                                     check = false; 
+                                    console.log('WELT');
                                 }else{
                                     accBody.style.height= 'auto';
                                     parent.classList.add('is-open');       
