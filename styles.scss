@@ -1,0 +1,179 @@
+
+
+$icon-font: 'Material Icons';
+$color-a: #fbb03b;
+$color-breadcrumb: #607fa3;
+$color-alert: #d3595e;
+
+
+.h2, h2 {
+  font-size: 1.75rem; 
+  padding: 10px;
+}
+
+%box{
+    color: white;
+    position: relative;
+    padding: 20px;
+    padding-left: 60px;
+    margin: 20px 0;
+    user-select: None;
+
+}
+
+%box_before{
+    font-family: $icon-font;
+    font-size: 30px;
+    position: absolute;
+    top: 12%;
+    font-family: $icon-font;
+    display: inline;
+}
+
+
+.box_hinweis{
+    &:not(.acc):before, & .acc_head:before{
+        content: 'attach_file';
+        @extend %box_before;
+    }
+
+    &:not(.acc):before{
+        left: 16px;
+    }
+
+    & .acc_head:before{
+        position: relative;
+        top: 4px;
+        padding-right: 10px;
+        margin-left: 10px;
+    }
+
+    background-color: darken($color-a,15%);
+    @extend %box;
+
+}
+
+.box_info{
+    &:not(.acc):before, & .acc_head:before{
+        content: 'info';
+        @extend %box_before;
+    }
+
+    &:not(.acc):before{
+        left: 16px;
+    }
+
+    & .acc_head:before{
+        position: relative;
+        top: 4px;
+        padding-right: 10px;
+        margin-left: 10px;
+    }
+
+    background-color: darken($color-breadcrumb,10%);;
+    @extend %box;
+}
+
+.box_alert{
+    &:not(.acc):before, & .acc_head:before{
+        content: 'warning';
+        @extend %box_before;
+    }
+
+    &:not(.acc):before{
+        left: 16px;
+    }
+
+
+    & .acc_head:before{
+        position: relative;
+        top: 4px;
+        padding-right: 10px;
+          margin-left: 10px;
+    }
+    background-color: darken($color-alert,25%);
+    @extend %box;
+}
+
+ 
+
+
+%box
+{
+	&.acc
+	{
+
+	padding: 0!important;
+
+	.acc_body
+	{
+		padding: rem(30px);
+	}
+
+	.acc_head
+	{
+		cursor: pointer;
+        margin-bottom: 0;
+        overflow: hidden;
+        padding-right: 30px;
+        position: relative;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        margin-top: 0;
+        width: 100%;
+        display: block;
+	}
+
+	>span
+	{
+        color: #fff;
+		padding: rem(20px);
+		span{
+
+				&:after
+				{
+					font-family:$icon-font;
+					content: 'keyboard_arrow_right';
+					position: absolute;
+					right: 0;
+          top: 14px;
+          padding-right: 50px;
+          font-family: $icon-font;
+          display: inline;
+                    
+				}
+		}
+
+		&:after
+		{
+			border: none;
+		}
+	}
+}
+	
+
+	&.is-open
+	{
+		>span
+		{
+			span{
+				&:after
+				{
+					font-family:$icon-font;
+          content: 'keyboard_arrow_down';
+          font-family: $icon-font;
+          display: inline;
+                    
+
+				}
+			}
+
+			&:after
+			{
+				border: none;
+			}
+		}
+	}
+
+
+}

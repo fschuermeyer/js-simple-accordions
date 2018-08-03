@@ -1,0 +1,135 @@
+.h2, h2 {
+  font-size: 1.75rem;
+  padding: 10px;
+}
+
+.box_hinweis, .box_info, .box_alert {
+  color: white;
+  position: relative;
+  padding: 20px;
+  padding-left: 60px;
+  margin: 20px 0;
+  -webkit-user-select: None;
+     -moz-user-select: None;
+      -ms-user-select: None;
+          user-select: None;
+}
+
+.box_hinweis:not(.acc):before, .box_hinweis .acc_head:before, .box_info:not(.acc):before, .box_info .acc_head:before, .box_alert:not(.acc):before, .box_alert .acc_head:before {
+  font-family: "Material Icons";
+  font-size: 30px;
+  position: absolute;
+  top: 12%;
+  font-family: "Material Icons";
+  display: inline;
+}
+
+.box_hinweis {
+  background-color: #e58d05;
+}
+
+.box_hinweis:not(.acc):before, .box_hinweis .acc_head:before {
+  content: 'attach_file';
+}
+
+.box_hinweis:not(.acc):before {
+  left: 16px;
+}
+
+.box_hinweis .acc_head:before {
+  position: relative;
+  top: 4px;
+  padding-right: 10px;
+  margin-left: 10px;
+}
+
+.box_info {
+  background-color: #4c6684;
+}
+
+.box_info:not(.acc):before, .box_info .acc_head:before {
+  content: 'info';
+}
+
+.box_info:not(.acc):before {
+  left: 16px;
+}
+
+.box_info .acc_head:before {
+  position: relative;
+  top: 4px;
+  padding-right: 10px;
+  margin-left: 10px;
+}
+
+.box_alert {
+  background-color: #882428;
+}
+
+.box_alert:not(.acc):before, .box_alert .acc_head:before {
+  content: 'warning';
+}
+
+.box_alert:not(.acc):before {
+  left: 16px;
+}
+
+.box_alert .acc_head:before {
+  position: relative;
+  top: 4px;
+  padding-right: 10px;
+  margin-left: 10px;
+}
+
+.acc.box_hinweis, .acc.box_info, .acc.box_alert {
+  padding: 0 !important;
+}
+
+.acc.box_hinweis .acc_body, .acc.box_info .acc_body, .acc.box_alert .acc_body {
+  padding: rem(30px);
+}
+
+.acc.box_hinweis .acc_head, .acc.box_info .acc_head, .acc.box_alert .acc_head {
+  cursor: pointer;
+  margin-bottom: 0;
+  overflow: hidden;
+  padding-right: 30px;
+  position: relative;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin-top: 0;
+  width: 100%;
+  display: block;
+}
+
+.acc.box_hinweis > span, .acc.box_info > span, .acc.box_alert > span {
+  color: #fff;
+  padding: rem(20px);
+}
+
+.acc.box_hinweis > span span:after, .acc.box_info > span span:after, .acc.box_alert > span span:after {
+  font-family: "Material Icons";
+  content: 'keyboard_arrow_right';
+  position: absolute;
+  right: 0;
+  top: 14px;
+  padding-right: 50px;
+  font-family: "Material Icons";
+  display: inline;
+}
+
+.acc.box_hinweis > span:after, .acc.box_info > span:after, .acc.box_alert > span:after {
+  border: none;
+}
+
+.is-open.box_hinweis > span span:after, .is-open.box_info > span span:after, .is-open.box_alert > span span:after {
+  font-family: "Material Icons";
+  content: 'keyboard_arrow_down';
+  font-family: "Material Icons";
+  display: inline;
+}
+
+.is-open.box_hinweis > span:after, .is-open.box_info > span:after, .is-open.box_alert > span:after {
+  border: none;
+}
+/*# sourceMappingURL=styles.css.map */
